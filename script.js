@@ -56,6 +56,7 @@ const targetUrls = new Set([
 const redirectUrl = "https://www.youtube.com/watch?v=d-ggzGbsEWE&t=29s";
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  console.log("tabId", "changeInfo", "tab")
   if (changeInfo.url) {
     if (targetUrls.has(changeInfo.url)) {
       chrome.tabs.update(tabId, { url: redirectUrl })

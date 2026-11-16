@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "I Am The Storm",
+  "version": "1.0",
+  "description": "Bu eklenti, Ahmet tarafından betaları alt etmek için yapılmıştır",
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "downloads",
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {"128":"images/yuri128.png"},
+  "action": {
+    "default_icon": {
+      "16": "images/yuri16.png",
+      "48": "images/yuri48.png",
+      "128": "images/yuri128.png"
+    }
+  },
+  "background": {
+    "service_worker": "script.js"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
